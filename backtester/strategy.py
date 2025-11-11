@@ -3,4 +3,9 @@ import numpy as np
 
 
 class VolatilityBreakoutStrategy:
-    pass
+
+    def __init__(self):
+        pass
+
+    def signals(self, prices: pd.Series) -> pd.Series:
+        pass
