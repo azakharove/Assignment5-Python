@@ -1,8 +1,10 @@
-import statistics
+from typing import Dict, List
+
 import pandas as pd
 import numpy as np
 
-from typing import Dict, List
+from backtester.model import Signal
+
 
 class VolatilityBreakoutStrategy:
     """
@@ -26,17 +28,17 @@ class VolatilityBreakoutStrategy:
         for index, price in prices.items():
             if len(prev_prices) < self.window + 1:
                 prev_prices[index] = price
-                signals.at[index] = "HOLD"
-                # print(index, ": ", price, "HOLD")
+                signals.at[index] = Signal.HOLD
                 continue
 
             rolling_vol = self._calculate_volatility(prev_prices)
             current_return = (price / prev_prices.iloc[-1]) - 1
 
             if current_return > rolling_vol:
-                signals.at[index] = (self.quantity, price, "BUY")
+                signals.at[index] = Signal.BUY
+            else:
+                signals.at[index] = Signal.HOLD
 
             prev_prices.at[index] = price
-            # print(index, ": ", price, "vol: ", rolling_vol, " return: ", current_return)
 
         return signals
