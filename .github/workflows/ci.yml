@@ -9,5 +9,5 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
-      - run: coverage run -m pytest -q
-      - run: coverage report --fail-under=90
+      - run: coverage run -m pytest tests/ -q
+      - run: coverage report --fail-under=90 --include=backtester/*
