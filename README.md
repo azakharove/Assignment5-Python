@@ -24,6 +24,10 @@ pytest
 
 ## Coverage Report
 
+Coverage: **91%** (≥90% required)
+
+![Coverage Report](htmlcov/html_ss.png)
+
 HTML coverage report available in `htmlcov/index.html`. Open it in a browser to view detailed coverage metrics.
 
 ```bash
