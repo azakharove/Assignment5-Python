@@ -1,0 +1,19 @@
+# Ignore third-party library coverage files
+z_000bf532330a579d_*.html
+z_41ca7eba39476006_*.html
+z_54861ffd224253cc_*.html
+z_7292092de2baedc7_*.html
+z_79f38f05d93f6946_*.html
+z_7a97283227ef9746_*.html
+z_85200ece5f7370c7_*.html
+z_ed0a635d0c23f30a_*.html
+z_f5eec12811a63677_*.html
+z_fd7b0c5ceb9702fb_*.html
+
+# Keep:
+# - index.html, class_index.html, function_index.html
+# - CSS, JS, images (style_*.css, coverage_html_*.js, *.png)
+# - status.json
+# - z_0f30d9fadb9b8f2c_*.html (backtester code)
+# - z_a44f0ac069e85531_*.html (test code)
+
